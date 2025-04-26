@@ -8,13 +8,8 @@ for path in os.listdir(dir_path):
     f = os.path.join(dir_path, path)
     if os.path.isfile(f):
         l = len(str(f))
-        if f[(-4):(l)] == '.png':
-            if checks[0] == 0:
-                path = os.path.join(dir_path, 'Images')
-                os.mkdir(path)
-                checks[0] = 1
-            shutil.move(f, os.path.join(dir_path, 'Images'))
-        elif f[(-4):(l)] == '.jpg':
+        print(f[(-5):(l)])
+        if f[(-4):(l)] == '.png' or '.jpg':
             if checks[0] == 0:
                 path = os.path.join(dir_path, 'Images')
                 os.mkdir(path)
